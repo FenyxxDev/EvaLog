@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* EvaLog Brand - Orange/Red emergency theme */
+    --primary: 16 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 200 25% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 38 95% 58%;
+    --accent-foreground: 220 15% 15%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Status colors for evacuation levels */
+    --status-safe: 140 60% 50%;
+    --status-safe-foreground: 0 0% 100%;
+    
+    --status-caution: 45 95% 58%;
+    --status-caution-foreground: 220 15% 15%;
+    
+    --status-warning: 25 95% 58%;
+    --status-warning-foreground: 0 0% 100%;
+    
+    --status-danger: 0 85% 60%;
+    --status-danger-foreground: 0 0% 100%;
+    
+    --status-evacuate: 340 85% 45%;
+    --status-evacuate-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 16 90% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(16 90% 55%) 0%, hsl(38 95% 58%) 100%);
+    --gradient-danger: linear-gradient(135deg, hsl(0 85% 60%) 0%, hsl(340 85% 45%) 100%);
+    --gradient-safe: linear-gradient(135deg, hsl(140 60% 50%) 0%, hsl(160 55% 45%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px hsl(220 15% 15% / 0.05);
+    --shadow-md: 0 4px 12px hsl(220 15% 15% / 0.08);
+    --shadow-lg: 0 8px 24px hsl(220 15% 15% / 0.12);
+    --shadow-alert: 0 0 0 4px hsl(0 85% 60% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 220 10% 92%;
+
+    --card: 220 18% 13%;
+    --card-foreground: 220 10% 92%;
+
+    --popover: 220 18% 13%;
+    --popover-foreground: 220 10% 92%;
+
+    --primary: 16 90% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 20% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 38 95% 58%;
+    --accent-foreground: 220 15% 15%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --status-safe: 140 55% 45%;
+    --status-safe-foreground: 0 0% 100%;
+    
+    --status-caution: 45 90% 55%;
+    --status-caution-foreground: 220 15% 15%;
+    
+    --status-warning: 25 90% 55%;
+    --status-warning-foreground: 0 0% 100%;
+    
+    --status-danger: 0 85% 60%;
+    --status-danger-foreground: 0 0% 100%;
+    
+    --status-evacuate: 340 85% 45%;
+    --status-evacuate-foreground: 0 0% 100%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 16 90% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
